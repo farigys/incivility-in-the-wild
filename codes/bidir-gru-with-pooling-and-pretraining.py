@@ -164,10 +164,10 @@ def calc_performance(y_pred, y_test, threshold, X_test, x_test_id):
     print("---------------------")
     for j in range(y_pred.shape[1]):
         if categories[j] != "NAMECALLING" and categories[j] != "VULGARITY": continue
-        ftp = open("error_analysis/" + categories[j] + "_with_pretraining_TP.txt", "w")
-        ftn = open("error_analysis/" + categories[j] + "_with_pretraining_TN.txt", "w")
-        ffp = open("error_analysis/" + categories[j] + "_with_pretraining_FP.txt", "w")
-        ffn = open("error_analysis/" + categories[j] + "_with_pretraining_FN.txt", "w")
+        ftp = open("../error_analysis/" + categories[j] + "_with_pretraining_TP.txt", "w")
+        ftn = open("../error_analysis/" + categories[j] + "_with_pretraining_TN.txt", "w")
+        ffp = open("../error_analysis/" + categories[j] + "_with_pretraining_FP.txt", "w")
+        ffn = open("../error_analysis/" + categories[j] + "_with_pretraining_FN.txt", "w")
         TP = TN = FP = FN = 0
         for i in range(y_pred.shape[0]):
             pred = y_pred[i][j]
